@@ -78,9 +78,10 @@ public class ProductServiceImpl implements ProductService {
                                         .name(product.getName())
                                         .image(imageStoragePath + "/" + product.getId()) // Construct image URL dynamically
                                         .price(product.getPrice())
-                                        .quantity(product.getUnit())
+                                        .quantity(product.getWeight())
+                                        .unit(product.getUnit())
                                         .discount(0) // Set discount logic if applicable
-                                        .count(1)
+                                        .count(product.getStockQuantity())
                                         .isSoldOut(product.getStockQuantity() == 0)
                                         .build()
                         ).collect(Collectors.toList()))
