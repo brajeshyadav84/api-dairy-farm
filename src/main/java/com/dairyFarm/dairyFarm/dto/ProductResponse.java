@@ -14,7 +14,8 @@ public class ProductResponse {
     private String name;
     private String image;
     private BigDecimal price;
-    private String quantity;
+    private BigDecimal quantity;
+    private String unit;
     private Integer discount;
     private Integer count;
     private Boolean isSoldOut;
